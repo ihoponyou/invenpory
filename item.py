@@ -9,6 +9,7 @@ class ItemConfig:
         self.name = name
         self.max_quantity = max_quantity
 
+# all equippable and have a model to show
 # scrolls
 # trinkets
 # weapons

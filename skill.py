@@ -2,7 +2,7 @@
 from item import ItemConfig
 from equippable import Equippable
 
-
+# equippable but do not show a model
 # weapon skills/spells
 # active skills (gaian repair, rigan flood)
 

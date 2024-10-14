@@ -30,6 +30,12 @@ class Character:
             existing_item.set_quantity(existing_item.get_quantity() + 1)
             return
         self.inventory[item.get_name()] = item
+    
+    def get_item(self, item_name: str) -> Item | None:
+        return self.inventory[item_name]
+    
+    def has_item(self, item_name: str) -> bool:
+        return self.get_item(item_name) is not None
 
     def learn_skill(self, skill: Skill) -> None:
         self.skills[skill.config.name] = skill

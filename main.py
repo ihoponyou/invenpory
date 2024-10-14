@@ -11,7 +11,8 @@ ITEM_CONFIGS = {
 }
 
 SKILL_CONFIGS = {
-    "GOBLET_THROW": SkillConfig("gthrow", ITEM_CONFIGS["GOBLET"])
+    "GOBLET_THROW": SkillConfig("gthrow", ITEM_CONFIGS["GOBLET"]),
+    "POMMEL_STRIKE": SkillConfig("pstrike", ITEM_CONFIGS["BRONZE_SWORD"]),
 }
 
 local_player = Player()
