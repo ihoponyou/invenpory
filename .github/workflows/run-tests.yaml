@@ -20,12 +20,14 @@ jobs:
         pip install pytest
 
   test-game:
+    runs-on: ubuntu-latest
     needs: install-deps
     steps:
     - name: Test game module
       run: pytest -vs game
 
   test-server:
+    runs-on: ubuntu-latest
     needs: install-deps
     steps:
     - name: Test server module
