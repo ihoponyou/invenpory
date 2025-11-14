@@ -1,9 +1,9 @@
-name: Run tests via pytest
+name: Run tests
 
 on: [push]
 
 jobs:
-  build:
+  install-deps:
 
     runs-on: ubuntu-latest
 
@@ -17,7 +17,16 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    - name: Test with pytest
-      run: |
         pip install pytest
-        pytest -v -s
+
+  test-game:
+    needs: install-deps
+    steps:
+    - name: Test game module
+      run: pytest -vs game
+
+  test-server:
+    needs: install-deps
+    steps:
+    - name: Test server module
+      run: pytest -vs server
